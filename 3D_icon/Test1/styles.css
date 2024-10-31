@@ -1,0 +1,98 @@
+/* Global styles and reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #111;
+}
+
+/* Glowing outer layer */
+.glow-layer {
+  padding: 20px;
+  border-radius: 30px;
+  background: rgba(191, 123, 255, 0.2);
+  box-shadow: 
+    0 0 20px rgba(191, 123, 255, 0.8), 
+    0 0 40px rgba(191, 123, 255, 0.6), 
+    0 0 60px rgba(191, 123, 255, 0.4);
+}
+
+/* Layered divs for depth */
+.layer {
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.layer1 { box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4); }
+.layer2 { box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3); }
+.layer3 { box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2); }
+
+/* Main question frame styles */
+.question-frame {
+  background-color: #ffffff;
+  padding: 40px 30px 30px;
+  width: 350px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  /* Multiple shadows to create lifted effect */
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),    /* Light shadow for subtle lift */
+    0 8px 16px rgba(0, 0, 0, 0.2),   /* Medium shadow for depth */
+    0 12px 24px rgba(0, 0, 0, 0.15); /* Darker shadow for strong lift */
+}
+
+/* Profile picture styling */
+.profile-pic {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Question text styling */
+.question-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 50px 0 20px;
+}
+
+/* Input box styling */
+.input-box {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #666;
+  background-color: #f2f2f2;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.input-box::placeholder {
+  color: #aaa;
+}
